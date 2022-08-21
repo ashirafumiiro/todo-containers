@@ -2,10 +2,10 @@ FROM node:16
 
 WORKDIR /usr/src/app
 
-COPY . .
+COPY ./todo-app/todo-backend .
 
 # Change npm ci to npm install since we are going to be in development mode
-RUN npm ci
+RUN npm install
 
 # npm start is the command to start the application in development mode
 CMD ["npm", "run", "dev"]
